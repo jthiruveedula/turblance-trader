@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Data & caches (never commit credentials or large datasets)
+data/*
+!data/.gitkeep
+*.parquet
+*.csv
+*.db
+*.sqlite3
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets — nothing credential-like belongs in this repo, ever
+*.pem
+*.key
+credentials*.json
+secrets*.yaml
+
+# Local run state (capture logs, scheduler output)
+/logs/
