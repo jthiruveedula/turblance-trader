@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turblance Trader — Research-Grade Trading Terminal</title>
+<meta name="description" content="An original, research-grade trading terminal: dealer-exposure charting (GEX/VEX), options-flow intelligence, paper-trading sandbox, and an AI trading agent. Clean-room build.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0e14'/><path d='M8 22 L14 14 L19 18 L25 9' stroke='%2300e5a0' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <svg width="26" height="26" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0a0e14" stroke="#00e5a0" stroke-width="1.5"/><path d="M8 22 L14 14 L19 18 L25 9" stroke="#00e5a0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>TURBLANCE</span>
+    </a>
+    <div class="nav-links">
+      <a href="#engines">Engines</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#validation">Validation</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="gh" href="https://github.com/jthiruveedula/turblance-trader" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="tape" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="pill"><span class="dot"></span> engines live · 201/201 tests passing</div>
+    <h1>See what the dealers see.</h1>
+    <p class="lede">Turblance Trader is an original, research-grade trading terminal — dealer-exposure charting (GEX/VEX), options-flow intelligence, dark-pool prints, a paper-trading sandbox, and an AI agent that explains itself. Built clean-room, validated by backtest before anything ships.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/jthiruveedula/turblance-trader" target="_blank" rel="noopener">View the repo</a>
+      <a class="btn ghost" href="#engines">Explore the engines</a>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat"><strong>201</strong><span>tests passing</span></div>
+    <div class="stat"><strong>8</strong><span>core engines</span></div>
+    <div class="stat"><strong>4</strong><span>data adapters</span></div>
+    <div class="stat"><strong>$0</strong><span>data spend so far</span></div>
+  </div>
+</section>
+
+<section class="section" id="engines">
+  <div class="wrap">
+    <p class="kicker">Under the hood</p>
+    <h2>Eight engines, one tape.</h2>
+    <div class="grid">
+      <div class="card live"><div class="tag">live</div><h3>Gamma Exposure (GEX)</h3><p>Dealer positioning mapped onto price: gamma walls, flip points, and projected support/resistance from the options chain.</p></div>
+      <div class="card live"><div class="tag">live</div><h3>Vanna Exposure (VEX)</h3><p>Vol-of-spot sensitivity across strikes — the second-order flow that moves markets when vol regimes shift.</p></div>
+      <div class="card live"><div class="tag">live</div><h3>Options-Flow Scanner</h3><p>Sweeps, blocks, and unusual activity detection with institutional-footprint heuristics.</p></div>
+      <div class="card live"><div class="tag">live</div><h3>Dark-Pool Analytics</h3><p>FINRA ATS prints and TRF flow, tracked weekly — where the quiet size actually trades.</p></div>
+      <div class="card live"><div class="tag">live</div><h3>Alert Engine</h3><p>15-minute market-hours evaluations with real-trigger chat notifications. Quiet runs stay silent.</p></div>
+      <div class="card live"><div class="tag">live</div><h3>Signal Engine</h3><p>IV surfaces, instinct signals, and plain-language trade suggestions with stated reasoning.</p></div>
+      <div class="card"><div class="tag soon">in build</div><h3>Paper-Trading Sandbox</h3><p>Simulate strategies against live data with Greeks-attributed P&amp;L. The terminal never routes real orders on its own.</p></div>
+      <div class="card"><div class="tag soon">in build</div><h3>AI Trading Agent</h3><p>Reads charts, positioning, and flow — and explains every call in plain language, with its evidence attached.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="pipeline">
+  <div class="wrap">
+    <p class="kicker">Data pipeline</p>
+    <h2>From raw tape to explained signal.</h2>
+    <div class="pipe">
+      <div class="step"><strong>Capture</strong><span>Free &amp; delayed feeds via 4 adapters — CBOE, IBKR, Schwab, Alpaca</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Engines</strong><span>GEX · VEX · flow · dark pool compute exposure in parallel</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Signals</strong><span>Levels, sweeps, and suggestions with rule-based reasoning</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Alerts</strong><span>Evaluated every 15 min in market hours; post-market summary after close</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="validation">
+  <div class="wrap">
+    <p class="kicker">Evidence standard</p>
+    <h2>Nothing ships unbacktested.</h2>
+    <div class="grid three">
+      <div class="card"><h3>Backtest harness</h3><p>Every feature ships with a historical validation report: methodology, sample sizes, in-sample vs out-of-sample.</p></div>
+      <div class="card"><h3>Honest limits</h3><p>Unvalidated signals are labeled as such — never presented as reliable. Losing verdicts kill features, cleanly.</p></div>
+      <div class="card"><h3>Paper first</h3><p>Strategies prove themselves in the $25k notional sandbox with 1% risk sizing before touching anything real.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="roadmap">
+  <div class="wrap">
+    <p class="kicker">Where it stands</p>
+    <h2>Roadmap</h2>
+    <ol class="timeline">
+      <li class="done"><strong>Phase 0 — Recon</strong><span>Competitive landscape mapped from public sources. Done.</span></li>
+      <li class="done"><strong>Phase 1 — Spec</strong><span>Functional spec + architecture approved. Done.</span></li>
+      <li class="done"><strong>Phase 2 — Data pipeline</strong><span>Free/delayed feeds wired through 4 adapters. Done.</span></li>
+      <li class="done"><strong>Phase 3 — Engines</strong><span>GEX, VEX, flow scanner, dark pool, alerts, signals live. Done.</span></li>
+      <li class="now"><strong>Phase 4 — Backtest harness + validation</strong><span>Reports per feature; paper-trading sessions running. In progress.</span></li>
+      <li><strong>Phase 5 — Hardening + review</strong><span>Live-session testing, then ship. Next.</span></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <p><strong>Turblance Trader</strong> — an original build. Clean-room: studied from public sources only; no third-party code, assets, branding, or copy.</p>
+    <p class="muted">No real money moves without explicit approval. This is a research and paper-trading tool.</p>
+    <a href="https://github.com/jthiruveedula/turblance-trader" target="_blank" rel="noopener">github.com/jthiruveedula/turblance-trader ↗</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
