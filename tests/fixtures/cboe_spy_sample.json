@@ -1,0 +1,49 @@
+{
+ "data": {
+  "current_price": 658.42,
+  "options": [
+   {
+    "ask": 2.25,
+    "bid": 2.1,
+    "delta": 0.42,
+    "gamma": 0.031,
+    "iv": 0.185,
+    "last_trade_price": 2.18,
+    "open_interest": 1234,
+    "option": "SPY260918C00660000",
+    "theta": -0.15,
+    "vega": 0.09,
+    "volume": 56
+   },
+   {
+    "ask": 3.45,
+    "bid": 3.3,
+    "delta": -0.55,
+    "gamma": 0.029,
+    "iv": 0.21,
+    "last_trade_price": 3.38,
+    "open_interest": 987,
+    "option": "SPY260918P00660000",
+    "theta": -0.12,
+    "vega": 0.1,
+    "volume": 44
+   },
+   {
+    "ask": 5.2,
+    "bid": 5.05,
+    "delta": 0.38,
+    "gamma": 0.018,
+    "iv": 0.1725,
+    "last_trade_price": null,
+    "open_interest": 321,
+    "option": "SPY261016C00670000",
+    "theta": -0.09,
+    "vega": 0.14,
+    "volume": null
+   }
+  ],
+  "security_type": "equity",
+  "symbol": "SPY"
+ },
+ "timestamp": "2026-09-18 15:59:00"
+}
